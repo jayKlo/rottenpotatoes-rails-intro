@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
   def index
     @all_ratings = Movie.all_ratings
     redirect = false
-    
+    @movies = Movie.all
     logger.debug(session.inspect)
     
     if params[:sort_by]
